@@ -1,0 +1,111 @@
+global:
+  sql_adapter: default
+
+local:
+  vhost: http://bep.dev.cc/
+  wordpress_path: /Users/TK/Sites/bep.dev.cc # use an absolute path here
+
+  database:
+    name: bepDBs0vb5
+    user: bepDBs0vb5
+    password: "IiTftk1ict" # could be blank, so always use quotes around
+    host: 127.0.0.1
+
+stage:
+  vhost: http://bep.mirandacreative.com
+  wordpress_path: /home/212582/users/.home/domains/bep.mirandacreative.com/html # use an absolute path here
+
+  database:
+    name: db212582_bep
+    user: db212582_bep
+    password: 6*{P7Fev,sv
+    host: internal-db.s212582.gridserver.com
+    # port: 3308 # Use just in case you have exotic server config
+    # mysqldump_options: --max_allowed_packet=1G # Only available if using SSH
+
+  ssh:
+      host: s212582.gridserver.com
+      user: mirandacreative.com
+      password: m68.Aj#yZp! # password is optional, will use public keys if available.
+
+### Production Information 
+#production:
+#  vhost: http://buyersedgepurchasing.com
+#  wordpress_path: /home/209053/users/.home/domains/buyersedgepurchasing.com/html # use an absolute path here
+#
+#  database:
+#    name: db209053_bep_pro
+#    user: db209053_pro
+#    password: k?S!8s0cXv
+#    host: internal-db.s209053.gridserver.com
+#    # port: 3308 # Use just in case you have exotic server config
+#    # mysqldump_options: --max_allowed_packet=1G # Only available if using SSH
+#
+#  exclude:
+#    - '.git/'
+#    - '.gitignore'
+#    - '.sass-cache/'
+#    - 'node_modules/'
+#    - 'bin/'
+#    - 'tmp/*'
+#    - 'Gemfile*'
+#    - 'Movefile'
+#    - 'movefile'
+#    - 'movefile.yml'
+#    - 'movefile.yaml'
+#    - 'wp-config.php'
+#    - 'wp-content/*.sql.gz'
+#    - '*.orig'
+#
+#  # paths: # you can customize wordpress internal paths
+#  #   wp_content: wp-content
+#  #   uploads: wp-content/uploads
+#  #   plugins: wp-content/plugins
+#  #   mu_plugins: wp-content/mu-plugins
+#  #   themes: wp-content/themes
+#  #   languages: wp-content/languages
+#
+#  ssh:
+#    host: s209053.gridserver.com
+#    user: buyersedgepurchasing.com
+#    password: m68.Aj#yZp! # password is optional, will use public keys if available.
+  #   port: 22 # Port is optional
+  #   rsync_options: --verbose --itemize-changes# Additional rsync options, optional
+  #   gateway: # Gateway is optional
+  #     host: host
+  #     user: user
+  #     password: password # password is optional, will use public keys if available.
+
+  # ftp:
+  #   user: user
+  #   password: password
+  #   host: host
+  #   passive: true
+  #   scheme: ftps # default ftp
+
+  # hooks: # Remote hooks won't work with FTP
+  #   push:
+  #     before:
+  #       local:
+  #         - 'echo "Do something locally before push"'
+  #       remote:
+  #         - 'echo "Do something remotely before push"'
+  #     after:
+  #       local:
+  #         - 'echo "Do something locally after push"'
+  #       remote:
+  #         - 'echo "Do something remotely after push"'
+  #   pull:
+  #     before:
+  #       local:
+  #         - 'echo "Do something locally before pull"'
+  #       remote:
+  #         - 'echo "Do something remotely before pull"'
+  #     after:
+  #       local:
+  #         - 'echo "Do something locally after pull"'
+  #       remote:
+  #         - 'echo "Do something remotely after pull"'
+
+# staging: # multiple environments can be specified
+#   [...]
